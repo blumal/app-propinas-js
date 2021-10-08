@@ -20,18 +20,18 @@
         <div>
             <h2>Calculador de propinas</h2>
         </div>
-        <form onsubmit="calculo(); return false; "></form>
-        <!--Da igual lo que hagas, no hará redirección-->
-        <form action="processes/calculo.proc.php" method="POST">
-            <input type="number" name="cuenta" id="" placeholder="total de la cuenta...">
+        <form onsubmit="calculo(); return false; ">
+            <!--Solo sirve en los form, return false se encarga de no recargar la página-->
+            <!--Da igual lo que hagas, no hará redirección-->
+            <input type="number" name="cuenta" id="totalCuenta" placeholder="total de la cuenta...">
             <!--step="0.01"-->
-            <select name="servicio" id="">
+            <select name="servicio" id="servicio">
             <option value="0.3">30% Excelente</option>
             <option value="0.2">20% Bueno</option>
             <option value="0.1" selected>10% Normal</option>
             <option value="0.05">5% Malo</option>
         </select>
-            <input type="number" name="personas" id="" placeholder="¿cuentas personas van a pagar?">
+            <input type="number" name="personas" id="personas" placeholder="¿cuentas personas van a pagar?">
             <input type="submit" value="Calcular" name="submit">
 
         </form>
